@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'life-cycle';
+
+  valor: number = 5;
+  deletarCiclo: boolean = false;
+  mudarValor() {
+    this.valor++;
+  }
+  destruirClico() {
+    this.deletarCiclo = true;
+  }
 }
