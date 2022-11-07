@@ -1,0 +1,16 @@
+.lista {
+  background: white;
+
+  padding: 1rem;
+  width: 328px;
+
+}
+
+.lista h4 {
+  border-bottom: 1px solid blue;
+  padding-bottom: 1rem;
+  border-style: none none dashed none;
+  font-family: 'Mansalva', sans-serif;
+  color: #4574E3;
+
+}
