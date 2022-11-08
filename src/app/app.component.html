@@ -1,6 +1,6 @@
 <section class="main">
-  <app-add-item></app-add-item>
+  <app-add-item (aoAdicionar)="addLista($event)"></app-add-item>
   <div class="container">
-    <app-lista></app-lista>
+    <app-lista [listaDeCompra]="items"></app-lista>
   </div>
 </section>

@@ -1,4 +1,4 @@
-<div class="add-item">
-  <input type="text" placeholder="Digite o item que deseja adicionar">
-  <button>Salvar item</button>
-</div>
+<form class="add-item" >
+  <input type="text" name="item" placeholder="Digite o item que deseja adicionar" #itemCompra>
+  <button type="submit" (click)="onSubmit(itemCompra)">Salvar item</button>
+</form>

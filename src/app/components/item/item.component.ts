@@ -10,6 +10,7 @@ export class ItemComponent implements OnInit {
 
   faPen = faPen;
   faTrash = faTrash
+
   constructor() { }
 
   ngOnInit(): void {
