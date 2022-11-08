@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { CicloComponent } from './components/ciclo/ciclo.component';
 import { AddItemComponent } from './components/add-item/add-item.component';
 import { ListaComponent } from './components/lista/lista.component';
-import { ItemComponent } from './components/item/item.component';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule } from '@angular/forms';
@@ -16,7 +15,6 @@ import { FormsModule } from '@angular/forms';
     CicloComponent,
     AddItemComponent,
     ListaComponent,
-    ItemComponent
   ],
   imports: [
     BrowserModule,

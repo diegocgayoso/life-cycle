@@ -7,13 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'life-cycle';
-  items: Array<string> = [];
-
-  addLista($event: string) {
-    if($event !== ''){
-      console.log($event);
-      this.items.push($event);
-    }
-    console.log(this.items);
-  }
 }

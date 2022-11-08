@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-add-item',
@@ -6,14 +6,18 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./add-item.component.css']
 })
 export class AddItemComponent implements OnInit {
-  @Output() aoAdicionar = new EventEmitter();
-
+  produto: string = '';
 
   constructor() { }
 
   ngOnInit(): void {
+    console.log('AddItemComponent iniciado.');
+
   }
-  onSubmit(itemCompra: any) {
-    this.aoAdicionar.emit(itemCompra.value);
+
+  onSubmit() {
+    console.log(`Item adicionado: ${this.produto}`);
   }
+
+
 }

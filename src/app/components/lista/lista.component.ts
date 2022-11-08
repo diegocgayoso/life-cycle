@@ -1,22 +1,35 @@
-import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { faPen, faTrash } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-lista',
   templateUrl: './lista.component.html',
   styleUrls: ['./lista.component.css']
 })
-export class ListaComponent implements OnInit, OnChanges {
+export class ListaComponent implements OnInit {
+  listaDeCompras = [
+    {
+      nome: 'Queijo Minas',
+      data: 'Segunda-feira (31/10/2022) às 08:30' },
+    {
+      nome: 'Leite integral',
+      data: 'Segunda-feira (31/10/2022) às 08:30' },
+    {
+      nome: 'Mamão papaia',
+      data: 'Segunda-feira (31/10/2022) às 08:30' },
+    {
+      nome: 'Pão francês',
+      data: 'Segunda-feira (31/10/2022) às 08:30' }
+  ]
 
-  @Input() listaDeCompra! : Array<string>;
+  faPen = faPen;
+  faTrash = faTrash
+
   constructor() { }
 
+
   ngOnInit(): void {
-    console.log(this.listaDeCompra);
-  }
-  ngOnChanges(changes: SimpleChanges): void {
-    if(!changes['listaDeCompra'].previousValue){
-      console.log(this.listaDeCompra);
-    }
+    console.log('ListaComponent iniciado.');
   }
 
 }
