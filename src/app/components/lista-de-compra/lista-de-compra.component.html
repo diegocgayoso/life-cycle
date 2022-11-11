@@ -1,0 +1,21 @@
+<div class="lista">
+  <h4 class="title-list">Lista de Compras</h4>
+  <div *ngFor="let produto of listaDeCompras">
+    <div class="content" *ngIf="produto.comprado === false">
+      <input class="checkbox" type="checkbox" name="comprado" id="comprado">
+      <p class="description">{{produto.nome}}</p>
+      <fa-icon class="delete-icon" [icon]="faTrash"></fa-icon>
+      <fa-icon class="edit-icon" [icon]="faPen"></fa-icon>
+      <small class="date">{{produto.data}}</small>
+    </div>
+    <!-- <ng-template #comprados>
+      <h4 class="title-list">Comprados</h4>
+      <div class="content">
+        <input class="checkbox" type="checkbox" name="comprado" id="comprado" [checked]="produto.comprado">
+        <p class="description">{{produto.nome}}</p>
+        <small class="date">{{produto.data}}</small>
+      </div>
+    </ng-template> -->
+  <!-- </div> -->
+
+</div>

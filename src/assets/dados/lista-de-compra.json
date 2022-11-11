@@ -1,0 +1,37 @@
+[
+  {
+    "nome": "Queijo Minas",
+    "data": "Segunda-feira (31/10/2022) às 08:30",
+    "comprado": false
+  },
+  {
+    "nome": "Leite integral",
+    "data": "Segunda-feira (31/10/2022) às 08:30",
+    "comprado": false
+  },
+  {
+    "nome": "Mamão papaia",
+    "data": "Segunda-feira (31/10/2022) às 08:30",
+    "comprado": false
+  },
+  {
+    "nome": "Pão francês",
+    "data": "Segunda-feira (31/10/2022) às 08:30",
+    "comprado": false
+  },
+  {
+    "nome": "Esponja de louça",
+    "data": "Segunda-feira (31/10/2022) às 08:30",
+    "comprado": true
+  },
+  {
+    "nome": "Cacau em pó",
+    "data": "Segunda-feira (31/10/2022) às 08:30",
+    "comprado": true
+  },
+  {
+    "nome": "Aveia em flocos",
+    "data": "Segunda-feira (31/10/2022) às 08:30",
+    "comprado": true
+  }
+]

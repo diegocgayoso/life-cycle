@@ -4,22 +4,26 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { CicloComponent } from './components/ciclo/ciclo.component';
 import { AddItemComponent } from './components/add-item/add-item.component';
-import { ListaComponent } from './components/lista/lista.component';
+import { ListaDeCompraComponent } from './components/lista-de-compra/lista-de-compra.component';
+import { ListaDeCompradosComponent } from './components/lista-de-comprados/lista-de-comprados.component';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     CicloComponent,
     AddItemComponent,
-    ListaComponent,
+    ListaDeCompraComponent,
+    ListaDeCompradosComponent,
   ],
   imports: [
     BrowserModule,
     FontAwesomeModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
