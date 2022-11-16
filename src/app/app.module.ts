@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -23,7 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     FontAwesomeModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,3 +1,4 @@
+import { ListaDeCompraService } from './../../services/lista-de-compra.service';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ListaDeCompra } from 'src/app/interfaces/IProdutos';
@@ -10,13 +11,14 @@ import { ListaDeCompra } from 'src/app/interfaces/IProdutos';
 export class ListaDeCompradosComponent implements OnInit {
   listaDeComprados!: any;
 
-  constructor(private http : HttpClient) { }
+  constructor(
+    private listaDeCompraService: ListaDeCompraService
+  ) { }
 
   ngOnInit(): void {
-    this.http.get<ListaDeCompra>('../../../assets/dados/lista-de-compra.json').subscribe((result)=> {
+    this.listaDeCompraService.getListaDeCompra().subscribe((result) => {
       console.log(result);
       this.listaDeComprados = result;
-      console.log(this.listaDeComprados);
     })
   }
 

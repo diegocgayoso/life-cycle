@@ -4,18 +4,8 @@
     <div class="content" *ngIf="produto.comprado === false">
       <input class="checkbox" type="checkbox" name="comprado" id="comprado">
       <p class="description">{{produto.nome}}</p>
-      <fa-icon class="delete-icon" [icon]="faTrash"></fa-icon>
-      <fa-icon class="edit-icon" [icon]="faPen"></fa-icon>
+      <fa-icon class="delete-icon" [icon]="faTrash" (click)="deleteItem(produto)"></fa-icon>
+      <fa-icon class="edit-icon" [icon]="faPen" (click)="editItem(produto)"></fa-icon>
       <small class="date">{{produto.data}}</small>
     </div>
-    <!-- <ng-template #comprados>
-      <h4 class="title-list">Comprados</h4>
-      <div class="content">
-        <input class="checkbox" type="checkbox" name="comprado" id="comprado" [checked]="produto.comprado">
-        <p class="description">{{produto.nome}}</p>
-        <small class="date">{{produto.data}}</small>
-      </div>
-    </ng-template> -->
-  <!-- </div> -->
-
 </div>

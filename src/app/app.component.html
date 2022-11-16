@@ -1,7 +1,8 @@
 <section class="main">
-  <app-add-item></app-add-item>
+  <app-add-item [produtoEdit]="item"></app-add-item>
   <div class="container">
-    <app-lista-de-compra ></app-lista-de-compra>
+    <app-lista-de-compra (aoEditarItem)="editandoItem($event)"></app-lista-de-compra>
     <app-lista-de-comprados></app-lista-de-comprados>
   </div>
 </section>
+

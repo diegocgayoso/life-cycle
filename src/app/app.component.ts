@@ -1,3 +1,4 @@
+import { ListaDeCompra } from 'src/app/interfaces/IProdutos';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,4 +8,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'life-cycle';
+  item! : ListaDeCompra;
+
+
+
+  editandoItem(ev: ListaDeCompra){
+    console.table(ev);
+    this.item = ev;
+  }
 }
+
+
