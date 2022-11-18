@@ -1,0 +1,16 @@
+<input
+  class="checkbox"
+  type="checkbox"
+  name="comprado"
+  id="comprado"
+  [checked]="produto.comprado"
+  [disabled]="produto.comprado"
+  [(ngModel)]="produto.comprado"
+  (click)="checked()">
+<p class="description" [class.line-through]="produto.comprado">{{produto.nome}}</p>
+<div class="d-contents" *ngIf="!produto.comprado">
+  <fa-icon class="delete-icon" [icon]="faTrash" (click)="deleteItem()"></fa-icon>
+  <fa-icon class="edit-icon" [icon]="faPen" (click)="editItem()"></fa-icon>
+  <button (click)="addArray()">Add item array</button>
+</div>
+<small class="date">{{produto.data}}</small>

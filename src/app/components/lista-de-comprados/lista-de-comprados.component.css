@@ -32,7 +32,6 @@ small {
 }
 
 .checkbox {
-  /* justify-self: start; */
   grid-area: checkbox;
 }
 

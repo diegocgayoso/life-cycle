@@ -11,6 +11,7 @@ import { ListaDeCompradosComponent } from './components/lista-de-comprados/lista
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ItemListaComponent } from './components/item-lista/item-lista.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
     AddItemComponent,
     ListaDeCompraComponent,
     ListaDeCompradosComponent,
+    ItemListaComponent,
   ],
   imports: [
     BrowserModule,

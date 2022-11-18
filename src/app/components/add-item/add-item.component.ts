@@ -57,7 +57,7 @@ export class AddItemComponent implements OnInit {
 
   ngOnChanges(changes: SimpleChanges): void {
     console.log(changes['produtoEdit'].currentValue);
-    this.log('Chamou aqui em?!');
+    // this.log('Chamou aqui em?!');
     if (this.produtoEdit !== undefined && !changes['produtoEdit'].firstChange) {
       this.editando = true;
       const dadosEditar = changes['produtoEdit'].currentValue;

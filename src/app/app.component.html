@@ -1,8 +1,21 @@
 <section class="main">
   <app-add-item [produtoEdit]="item"></app-add-item>
   <div class="container">
-    <app-lista-de-compra (aoEditarItem)="editandoItem($event)"></app-lista-de-compra>
-    <app-lista-de-comprados></app-lista-de-comprados>
+    <!-- <app-lista-de-compra (aoEditarItem)="editandoItem($event)"></app-lista-de-compra>
+    <app-lista-de-comprados></app-lista-de-comprados> -->
+    <div class="lista">
+      <h4 class="title-list">Lista de Compras</h4>
+      <div *ngFor="let produto of listaDeCompras">
+        <div  *ngIf="produto.comprado === false">
+          <app-item-lista [produto]="produto"></app-item-lista>
+        </div>
+      </div>
+      <h4 class="title-list">Comprados</h4>
+      <div *ngFor="let produto of listaDeCompras">
+        <div *ngIf="produto.comprado">
+          <app-item-lista [produto]="produto"></app-item-lista>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
-

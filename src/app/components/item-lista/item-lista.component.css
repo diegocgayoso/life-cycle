@@ -1,19 +1,4 @@
-.lista {
-  background: white;
-  padding: 1rem;
-  width: 328px;
-}
-
-.lista h4 {
-  border-bottom: 1px solid blue;
-  padding-bottom: 1rem;
-  border-style: none none dashed none;
-  font-family: 'Mansalva', sans-serif;
-  color: #4574E3;
-}
-
-
-.content {
+:host {
   display: grid;
   grid-template-columns: .5fr 2.5fr .5fr .5fr;
   grid-template-rows: 1fr 1fr;
@@ -40,6 +25,10 @@ small {
   grid-area: description;
 }
 
+.d-contents {
+  display: contents;
+}
+
 .delete-icon {
   justify-self: center;
   align-self: center;
@@ -55,4 +44,9 @@ small {
 .date {
   justify-self: start;
   grid-area: date;
+  margin-top: .5rem;
+  margin-left: .5rem;
+}
+.line-through {
+  text-decoration: line-through;
 }

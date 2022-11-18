@@ -17,36 +17,8 @@
       "nome": "Mamão papaia",
       "data": "Segunda-feira (31/10/2022) às 08:30",
       "comprado": false
-    },
-    {
-      "id": 4,
-      "nome": "Pão francês",
-      "data": "Segunda-feira (31/10/2022) às 08:30",
-      "comprado": false
-    },
-    {
-      "id": 5,
-      "nome": "Esponja de louça",
-      "data": "Segunda-feira (31/10/2022) às 08:30",
-      "comprado": true
-    },
-    {
-      "id": 6,
-      "nome": "Cacau em pó",
-      "data": "Segunda-feira (31/10/2022) às 08:30",
-      "comprado": true
-    },
-    {
-      "id": 7,
-      "nome": "Aveia em flocos",
-      "data": "Segunda-feira (31/10/2022) às 08:30",
-      "comprado": true
-    },
-    {
-      "nome": "Batata",
-      "comprado": false,
-      "data": "14/11/2022 16:34:15",
-      "id": 9
     }
   ]
 }
+
+
