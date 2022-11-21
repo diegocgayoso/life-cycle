@@ -1,6 +1,6 @@
 import { ListaDeCompraService } from './../../services/lista-de-compra.service';
 import { Component, OnInit, Input, SimpleChanges } from '@angular/core';
-import { ListaDeCompra } from 'src/app/interfaces/IProdutos';
+import { Produto } from 'src/app/interfaces/IProdutos';
 
 @Component({
   selector: 'app-add-item',
@@ -10,11 +10,11 @@ import { ListaDeCompra } from 'src/app/interfaces/IProdutos';
 export class AddItemComponent implements OnInit {
 
   produto = '';
-  @Input() produtoEdit!: ListaDeCompra;
+  @Input() produtoEdit!: Produto;
 
   editando = false;
 
-  constructor(private listaDeCompraService: ListaDeCompraService) { }
+  constructor(private service: ListaDeCompraService) { }
 
   ngOnInit(): void {
     console.log(this.produtoEdit);
@@ -25,30 +25,38 @@ export class AddItemComponent implements OnInit {
   }
 
   onSubmit() {
-    const item: ListaDeCompra = { nome: this.produto, comprado: false };
+    const item: Produto = { nome: this.produto, data: new Date, comprado: false };
+    console.log(this.editando);
+
     if (!this.editando) {
-      this.pushItem(item);
+      if(this.produto !== ''){
+        this.pushItem(item);
+      }
     } else {
       const dados = {
         id: this.produtoEdit.id,
         nome: this.produto,
-        comprado: this.produtoEdit.comprado,
-        data: this.produtoEdit.data
+        data: this.produtoEdit.data,
+        comprado: this.produtoEdit.comprado
       }
       this.editItem(dados);
     }
   }
 
   pushItem(item: any) {
-    this.listaDeCompraService.pushListaDeCompras(item).subscribe(res => console.log(res));
+    this.service.pushListaDeCompras(item).subscribe(res => console.log(res));
     this.cleanInput();
   }
 
   editItem(dadosEditar: any) {
     console.log(dadosEditar);
 
-    this.listaDeCompraService.editItem(dadosEditar).subscribe((res) => console.log(res));
+    this.service.editItem(dadosEditar).subscribe((res) => {
+      console.log(res);
+      this.editando = false
+    });
     this.cleanInput();
+
   }
 
   cleanInput() {
@@ -57,7 +65,7 @@ export class AddItemComponent implements OnInit {
 
   ngOnChanges(changes: SimpleChanges): void {
     console.log(changes['produtoEdit'].currentValue);
-    // this.log('Chamou aqui em?!');
+    this.log('Chamou aqui em?!');
     if (this.produtoEdit !== undefined && !changes['produtoEdit'].firstChange) {
       this.editando = true;
       const dadosEditar = changes['produtoEdit'].currentValue;

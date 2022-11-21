@@ -1,7 +1,6 @@
 import { ListaDeCompraService } from './../../services/lista-de-compra.service';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { ListaDeCompra } from 'src/app/interfaces/IProdutos';
 
 @Component({
   selector: 'app-lista-de-comprados',

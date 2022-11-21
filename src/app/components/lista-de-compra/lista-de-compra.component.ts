@@ -1,7 +1,7 @@
 import { ListaDeCompraService } from './../../services/lista-de-compra.service';
 import { Component, DoCheck, EventEmitter, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { faPen, faTrash } from '@fortawesome/free-solid-svg-icons';
-import { ListaDeCompra } from 'src/app/interfaces/IProdutos';
+import { Produto } from 'src/app/interfaces/IProdutos';
 
 @Component({
   selector: 'app-lista-de-compra',
@@ -33,13 +33,13 @@ export class ListaDeCompraComponent implements OnInit, DoCheck {
     })
   }
 
-  editItem(item: any) {
+  editarItem(item: any) {
     // console.log(`Editar item ${item.id}`);
     // console.table(item);
     this.aoEditarItem.emit(item);
   }
 
-  deleteItem(item: ListaDeCompra){
+  deleteItem(item: Produto){
     console.log(`Excluir item ${item.id}`);
     this.listaDeCompraService.deleteItem(item.id).subscribe((res)=> console.log(res));
     this.listaDeCompras.splice(item.id, 1);

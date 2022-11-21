@@ -1,4 +1,4 @@
-export interface ListaDeCompra {
+export interface Produto {
   id?: string | number;
   nome: string;
   data?: string | Date;

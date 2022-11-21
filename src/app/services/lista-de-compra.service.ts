@@ -1,4 +1,4 @@
-import { ListaDeCompra } from './../interfaces/IProdutos';
+import { Produto } from './../interfaces/IProdutos';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
@@ -14,19 +14,19 @@ export class ListaDeCompraService {
   }
 
   getListaDeCompra(){
-    return this.http.get<ListaDeCompra>(this.urlJSON);
+    return this.http.get<Produto>(this.urlJSON);
   }
 
-  pushListaDeCompras(item: ListaDeCompra){
+  pushListaDeCompras(item: Produto){
     this.datarProduto(item);
-    return this.http.post<ListaDeCompra>(this.urlJSON, item);
+    return this.http.post<Produto>(this.urlJSON, item);
   }
 
-  private datarProduto(item: ListaDeCompra){
+  private datarProduto(item: Produto){
     item.data = new Date().toLocaleString('pt-BR');
   }
 
-  editItem(item: ListaDeCompra){
+  editItem(item: Produto){
     const url = `${this.urlJSON}/${item.id}`;
     return this.http.put(url, item);
   }
