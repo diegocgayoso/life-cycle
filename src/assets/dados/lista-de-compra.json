@@ -2,13 +2,13 @@
   "listadecompra": [
     {
       "id": 1,
-      "nome": "Queijo mussarela",
+      "nome": "Queijo minas",
       "data": "Segunda-feira (31/10/2022) às 08:30",
       "comprado": false
     },
     {
       "id": 2,
-      "nome": "Leite integral",
+      "nome": "Leite desnatado",
       "data": "Segunda-feira (31/10/2022) às 08:30",
       "comprado": false
     },
@@ -43,16 +43,10 @@
       "comprado": true
     },
     {
-      "nome": "Batata",
-      "comprado": false,
-      "data": "14/11/2022 16:34:15",
-      "id": 9
-    },
-    {
-      "nome": "Farinha",
-      "comprado": false,
+      "id": 10,
+      "nome": "Farinha de trigo",
       "data": "17/11/2022 11:42:57",
-      "id": 10
+      "comprado": false
     }
   ]
 }
