@@ -1,24 +1,10 @@
 <section class="main">
-  <app-input
-    (aoAdicionar)="adicionar($event)"
-    (aoEditar)="editarItem($event)"
-    [itemEditar]="itemEditar"
-    >
+  <app-input>
   </app-input>
   <div class="container">
     <div class="lista">
       <h4 class="title-list">Lista de Compras</h4>
-      <div *ngFor="let item of listaDeCompra">
-        <div *ngIf="!item.comprado">
-          <app-item [item]="item" (aoEditar)="editar($event)" (aoExcluir)="excluir($event)" (aoMarcarComoComprado)="checkar($event)"></app-item>
-        </div>
-      </div>
       <h4 class="title-list">Comprados</h4>
-      <div *ngFor="let item of listaDeCompra">
-        <div *ngIf="item.comprado">
-          <app-item [item]="item"></app-item>
-        </div>
-      </div>
     </div>
   </div>
 </section>

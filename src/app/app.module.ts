@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { FormsModule } from '@angular/forms';
 import { InputComponent } from './components/input/input.component';
 import { ItemComponent } from './components/item/item.component';
 
@@ -16,8 +15,7 @@ import { ItemComponent } from './components/item/item.component';
   ],
   imports: [
     BrowserModule,
-    FontAwesomeModule,
-    FormsModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
