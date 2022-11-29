@@ -1,4 +1,3 @@
-import { Item } from './../../interface/iItem';
 import {
   Component,
   OnInit,
@@ -8,6 +7,7 @@ import {
   Input,
   SimpleChanges
 } from '@angular/core';
+import { Item } from 'src/app/interfaces/iItem';
 
 @Component({
   selector: 'app-input',
@@ -25,7 +25,6 @@ export class InputComponent implements OnInit, OnChanges {
   @Output() aoAdicionar = new EventEmitter();
   @Output() aoEditar = new EventEmitter();
 
-
   constructor() { }
 
   ngOnInit(): void { }
@@ -34,6 +33,8 @@ export class InputComponent implements OnInit, OnChanges {
     console.log('fui chamado-salvar');
 
     if (this.item !== '') {
+      console.log(this.item);
+
       this.aoAdicionar.emit(this.item);
     } else {
       console.log('Campo vazio');
@@ -62,7 +63,7 @@ export class InputComponent implements OnInit, OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
     const itemEditarChanges = changes['itemEditar'].currentValue;
-    if(itemEditarChanges !== undefined && !changes['itemEditar'].firstChange){
+    if (itemEditarChanges !== undefined && !changes['itemEditar'].firstChange) {
       this.editando = true;
       this.textoBotao = "Editar item";
       this.item = itemEditarChanges.nome;

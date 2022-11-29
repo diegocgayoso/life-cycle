@@ -5,6 +5,7 @@
   id="comprado"
   [checked]="item.comprado"
   [disabled]="item.comprado"
+  (click)="checked()"
   >
 <p class="description" [class.line-through]="item.comprado">{{item.nome}}</p>
 <div class="d-contents" *ngIf="!item.comprado">
