@@ -6,7 +6,7 @@
   id="comprado"
   [checked]="item.comprado"
   (change)="checkarItem()"
-  >
+>
 <p class="description" [class.line-through]="item.comprado === true">{{item.nome}}</p>
 <div class="d-contents" *ngIf="!item.comprado">
   <fa-icon class="delete-icon" [icon]="faTrash" ></fa-icon>

@@ -26,9 +26,9 @@ export class ItemComponent implements OnInit, OnChanges {
 
   checkarItem() {
     if(this.item.comprado == true){
-      return this.item.comprado = false;
+      this.item.comprado = false;
     }else{
-      return this.item.comprado = true;
+      this.item.comprado = true;
     }
   }
 }
