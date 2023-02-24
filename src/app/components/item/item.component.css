@@ -49,4 +49,5 @@ small {
 }
 .line-through {
   text-decoration: line-through;
+  color: gray
 }
