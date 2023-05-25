@@ -1,3 +1,4 @@
+import { ListaDeCompraService } from './../../service/lista-de-compra.service';
 import { Component, EventEmitter, Input, OnChanges, OnInit, Output } from '@angular/core';
 import { faPen, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { Item } from 'src/app/interfaces/iItem';
@@ -14,7 +15,7 @@ export class ItemComponent implements OnInit, OnChanges {
   faPen = faPen;
   faTrash = faTrash
 
-  constructor() { }
+  constructor(private listaService: ListaDeCompraService) { }
 
   ngOnInit(): void { }
 
@@ -25,10 +26,22 @@ export class ItemComponent implements OnInit, OnChanges {
   }
 
   checarItem() {
-    if(this.item.comprado == true){
-      this.item.comprado = false;
-    }else{
-      this.item.comprado = true;
-    }
+    // if(this.item.comprado){
+    //   this.item = {
+    //     id: this.item.id,
+    //     nome: this.item.nome,
+    //     data: this.item.data,
+    //     comprado: false,
+    //   }
+    // }else{
+    //   this.item = {
+    //     id: this.item.id,
+    //     nome: this.item.nome,
+    //     data: this.item.data,
+    //     comprado: true,
+    //   }
+    // }
+    this.item.comprado = !this.item.comprado;
+    this.listaService.editarItemDaLista(this.item);
   }
 }

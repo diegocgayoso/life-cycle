@@ -27,7 +27,8 @@ export class InputComponent implements OnInit, OnChanges {
   }
 
   editarItem(){
-    this.listaService.editarItemDaLista(this.itemQueVaiSerEditado, this.valorItem);
+    this.itemQueVaiSerEditado.nome = this.valorItem;
+    this.listaService.editarItemDaLista(this.itemQueVaiSerEditado);
     this.limparCampo();
     this.editando = false;
     this.textoBtn = "Salvar item"
