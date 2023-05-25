@@ -42,6 +42,6 @@ export class ItemComponent implements OnInit, OnChanges {
     //   }
     // }
     this.item.comprado = !this.item.comprado;
-    this.listaService.editarItemDaLista(this.item);
+    this.listaService.editarItemDaLista(this.item, this.item.nome );
   }
 }
